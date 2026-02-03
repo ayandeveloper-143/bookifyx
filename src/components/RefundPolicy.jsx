@@ -103,7 +103,7 @@ const RefundPolicy = () => {
                 <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-2">
                   <li><strong>Credit/Debit Cards:</strong> 5-10 business days to reflect in your account</li>
                   <li><strong>UPI Payments:</strong> 2-3 business days</li>
-                  <li><strong>Wallet Balance:</strong> Instant credit to your wallet app</li>
+                  <li><strong>Wallet Balance:</strong> Instant credit to your wallet</li>
                   <li><strong>Net Banking:</strong> 5-7 business days</li>
                 </ul>
                 <p className="text-gray-600 dark:text-gray-400 mt-4">
