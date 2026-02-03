@@ -9,7 +9,7 @@ const PopularBanner = () => {
             Most Popular E-Books <br className="hidden sm:block" />
             On BookifyX
           </h2>
-          <button className="mt-6 rounded bg-[#45a06b] px-8 py-3 text-white shadow">Shop</button>
+          <button className="mt-6 rounded bg-[#268fe0] px-8 py-3 text-white shadow">Shop</button>
         </div>
 
         <div className="hidden md:block fade-in-right">

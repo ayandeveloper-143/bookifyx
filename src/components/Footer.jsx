@@ -33,8 +33,8 @@ const footerColumns = [
   {
     title: 'Legal',
     links: [
-      { label: 'Terms', href: '/terms' },
-      { label: 'Privacy', href: '/privacy' },
+      { label: 'Terms', href: '/terms-conditions' },
+      { label: 'Privacy', href: '/privacy-policy' },
       { label: 'Cookies', href: '/cookies' },
       { label: 'DMCA', href: '/dmca' }
     ]
@@ -111,13 +111,13 @@ const Footer = () => {
 
       <div className="max-w-7xl mx-auto mt-6 md:mt-7 flex flex-col md:flex-row flex-wrap items-center justify-between pt-4 md:pt-6 text-xs md:text-sm px-4 sm:px-6">
         <div className="flex flex-col md:flex-row gap-3 md:gap-6 text-gray-600 dark:text-gray-400 w-full md:w-auto">
-          <a href="/terms" className="hover:text-primary dark:hover:text-primary transition-colors cursor-pointer">
+          <a href="/terms-conditions" className="hover:text-primary dark:hover:text-primary transition-colors cursor-pointer">
             Terms & Conditions
           </a>
           <a href="/cookies" className="hover:text-primary dark:hover:text-primary transition-colors cursor-pointer">
             Cookies
           </a>
-          <a href="/privacy" className="hover:text-primary dark:hover:text-primary transition-colors cursor-pointer">
+          <a href="/privacy-policy" className="hover:text-primary dark:hover:text-primary transition-colors cursor-pointer">
             Privacy Policy
           </a>
         </div>

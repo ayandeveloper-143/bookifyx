@@ -53,7 +53,7 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between relative">
         <div className="flex items-center space-x-10">
-          <a href="#" className="flex items-center justify-center -mt-1 flex-shrink-0">
+          <a href="/" className="flex items-center justify-center -mt-1 flex-shrink-0">
             <ThemeImage
               lightSrc="/src/assets/2.png"
               darkSrc="/src/assets/2_dark.png"

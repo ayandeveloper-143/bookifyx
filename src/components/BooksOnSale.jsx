@@ -80,7 +80,7 @@ const SaleBookCard = ({ book }) => {
       <h3 className="mt-2 md:mt-3 font-semibold text-sm md:text-base text-gray-900 dark:text-gray-100 truncate">
         {book.title}
       </h3>
-      <p className="text-xs text-indigo-500 dark:text-indigo-400 font-semibold mt-1">{book.categories}</p>
+      <p className="text-xs text-[#268fe0] dark:text-[#268fe0] font-semibold mt-1">{book.categories}</p>
 
       <div className="flex items-center justify-between mt-2">
         <div className="flex items-center space-x-1 text-orange-500 text-xs md:text-sm">

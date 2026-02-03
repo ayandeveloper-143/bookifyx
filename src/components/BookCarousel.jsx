@@ -6,7 +6,7 @@ const books = [
   { id: 3, title: 'Book 3', src: 'https://placehold.co/240x360?text=Book+3' }
 ];
 
-const positions = ['pos-left', 'pos-center', 'pos-right'];
+const positions = ['pos-right', 'pos-center', 'pos-left'];
 
 const BookCarousel = () => {
   const [offset, setOffset] = useState(0);

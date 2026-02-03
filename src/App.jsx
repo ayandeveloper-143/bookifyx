@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './components/HomePage.jsx';
 import NotFound from './components/NotFound.jsx';
+import PrivacyPolicy from './components/PrivacyPolicy.jsx';
+import TermsConditions from './components/TermsConditions.jsx';
 import ServiceUnavailable from './components/ServiceUnavailable.jsx';
 import useParallax from './components/useParallax.js';
 import useRevealOnScroll from './components/useRevealOnScroll.js';
@@ -15,6 +17,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/503" element={<ServiceUnavailable />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-conditions" element={<TermsConditions />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
