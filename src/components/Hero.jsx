@@ -93,7 +93,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="absolute -bottom-16 left-1/2 -translate-x-1/2 text-white px-10 py-6 rounded-xl shadow-lg flex items-center gap-4 z-30 whitespace-nowrap bg-primary">
+          <div className="absolute -bottom-16 left-1/2 -translate-x-1/2 text-white px-10 py-6 rounded-xl shadow-sm flex items-center gap-4 z-30 whitespace-nowrap bg-primary">
             <div className="text-center">
               <p className="text-2xl font-bold">250+</p>
               <p className="text-sm text-white/70">Subjects to choose from</p>

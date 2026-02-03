@@ -1,10 +1,24 @@
 import React, { useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const genres = ['Fantasy', 'Thriller', 'Romance', 'Non-Fiction', 'Self-Help'];
+const genres = ['JavaScript', 'Python', 'React', 'DSA', 'System Design'];
 
 const SearchSection = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const inputRef = useRef(null);
+  const navigate = useNavigate();
+
+  const handleSearch = () => {
+    if (searchTerm.trim()) {
+      navigate(`/browse?query=${encodeURIComponent(searchTerm.trim())}`);
+    }
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      handleSearch();
+    }
+  };
 
   const handleGenreClick = (genre) => {
     setSearchTerm(genre);
@@ -30,11 +44,13 @@ const SearchSection = () => {
                 placeholder="Search e-books"
                 value={searchTerm}
                 onChange={(event) => setSearchTerm(event.target.value)}
+                onKeyDown={handleKeyDown}
                 className="search-input w-full border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-full px-4 md:px-6 py-2 md:py-3 pr-12 text-lg md:text-base transition-all duration-300 md:placeholder-gray-500"
               />
 
               <button
                 type="button"
+                onClick={handleSearch}
                 className="md:hidden absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-400 search-icon border-none bg-transparent"
                 aria-label="Search"
               >
@@ -43,6 +59,7 @@ const SearchSection = () => {
 
               <button
                 type="button"
+                onClick={handleSearch}
                 className="hidden md:block absolute right-2 top-1/2 -translate-y-1/2 text-white rounded-full px-4 py-2 search-button bg-primary"
               >
                 Search

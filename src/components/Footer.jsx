@@ -17,7 +17,7 @@ const footerColumns = [
     links: [
       { label: 'About Us', href: '/about' },
       { label: 'Careers', href: '/careers' },
-      { label: 'Blog', href: '/blog' },
+      { label: 'Blogs', href: '/blogs' },
       { label: 'Contact', href: '/contact' }
     ]
   },

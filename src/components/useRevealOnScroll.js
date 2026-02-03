@@ -1,9 +1,15 @@
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const useRevealOnScroll = () => {
+  const location = useLocation();
+
   useEffect(() => {
     const fadeElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .fade-in-scale');
     if (!fadeElements.length) return;
+
+    // Reset visibility on route change
+    fadeElements.forEach((el) => el.classList.remove('visible'));
 
     const observerOptions = {
       root: null,
@@ -34,7 +40,7 @@ const useRevealOnScroll = () => {
       clearTimeout(timeoutId);
       observer.disconnect();
     };
-  }, []);
+  }, [location.pathname]);
 };
 
 export default useRevealOnScroll;
