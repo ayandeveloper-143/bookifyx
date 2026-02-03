@@ -3,11 +3,11 @@ import ThemeToggle from './ThemeToggle.jsx';
 import ThemeImage from './ThemeImage.jsx';
 
 const navLinks = [
-  { label: 'Home', href: '#' },
-  { label: 'Browse Books', href: '#' },
-  { label: 'Categories', href: '#' },
-  { label: 'Best Sellers', href: '#' },
-  { label: 'About', href: '#' }
+  { label: 'Home', href: '/' },
+  { label: 'Browse Books', href: '/browse' },
+  { label: 'Categories', href: '/categories' },
+  { label: 'Best Sellers', href: '/best-sellers' },
+  { label: 'About', href: '/about' }
 ];
 
 const Header = () => {
@@ -48,9 +48,8 @@ const Header = () => {
     <header
       ref={headerRef}
       id="header"
-      className={`sticky top-0 z-50 w-full transition-colors duration-300 bg-white/85 backdrop-blur-[15px] border-b border-black/10 ${
-        isOpen ? 'menu-open' : ''
-      }`}
+      className={`sticky top-0 z-50 w-full transition-colors duration-300 bg-white/85 backdrop-blur-[15px] border-b border-black/10 ${isOpen ? 'menu-open' : ''
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between relative">
         <div className="flex items-center space-x-10">
