@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
 const books = [
-  { id: 1, title: 'Book 1', src: '/src/assets/book-1.png' },
-  { id: 2, title: 'Book 2', src: '/src/assets/book-2.png' },
-  { id: 3, title: 'Book 3', src: '/src/assets/book-3.png' }
+  { id: 1, title: 'Book 1', src: 'https://placehold.co/240x360?text=Book+1' },
+  { id: 2, title: 'Book 2', src: 'https://placehold.co/240x360?text=Book+2' },
+  { id: 3, title: 'Book 3', src: 'https://placehold.co/240x360?text=Book+3' }
 ];
 
 const positions = ['pos-left', 'pos-center', 'pos-right'];
@@ -38,9 +38,8 @@ const BookCarousel = () => {
           return (
             <span
               key={book.id}
-              className={`w-2 h-2 rounded-full transition-colors duration-300 ${
-                isActive ? 'bg-primary' : 'bg-gray-300 dark:bg-gray-500'
-              }`}
+              className={`w-2 h-2 rounded-full transition-colors duration-300 ${isActive ? 'bg-primary' : 'bg-gray-300 dark:bg-gray-500'
+                }`}
             />
           );
         })}

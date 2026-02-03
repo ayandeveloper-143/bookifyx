@@ -9,7 +9,7 @@ const books = [
     price: '$45.4',
     original: '$98.4',
     discount: '50%',
-    image: '/src/assets/sale-1.png'
+    image: 'https://placehold.co/300x420'
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const books = [
     price: '$45.4',
     original: '$98.4',
     discount: '50%',
-    image: '/src/assets/sale-2.png'
+    image: 'https://placehold.co/300x420'
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const books = [
     price: '$45.4',
     original: '$98.4',
     discount: '50%',
-    image: '/src/assets/sale-3.png'
+    image: 'https://placehold.co/300x420'
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const books = [
     price: '$45.4',
     original: '$98.4',
     discount: '50%',
-    image: '/src/assets/sale-4.png'
+    image: 'https://placehold.co/300x420'
   },
   {
     id: 5,
@@ -49,7 +49,7 @@ const books = [
     price: '$45.4',
     original: '$98.4',
     discount: '30%',
-    image: '/src/assets/sale-5.png'
+    image: 'https://placehold.co/300x420'
   },
   {
     id: 6,
@@ -59,7 +59,7 @@ const books = [
     price: '$56.4',
     original: '$98.4',
     discount: '40%',
-    image: '/src/assets/sale-6.png'
+    image: 'https://placehold.co/300x420'
   }
 ];
 

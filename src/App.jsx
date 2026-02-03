@@ -1,14 +1,8 @@
 import React from 'react';
-import Header from './components/Header.jsx';
-import Hero from './components/Hero.jsx';
-import ExploreBook from './components/ExploreBook.jsx';
-import EbookOfWeek from './components/EbookOfWeek.jsx';
-import SearchSection from './components/SearchSection.jsx';
-import WhyBuy from './components/WhyBuy.jsx';
-import Testimonials from './components/Testimonials.jsx';
-import PopularBanner from './components/PopularBanner.jsx';
-import BooksOnSale from './components/BooksOnSale.jsx';
-import Footer from './components/Footer.jsx';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './components/HomePage.jsx';
+import NotFound from './components/NotFound.jsx';
+import ServiceUnavailable from './components/ServiceUnavailable.jsx';
 import useParallax from './components/useParallax.js';
 import useRevealOnScroll from './components/useRevealOnScroll.js';
 
@@ -17,18 +11,13 @@ const App = () => {
   useRevealOnScroll();
 
   return (
-    <div className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
-      <Header />
-      <Hero />
-      <ExploreBook />
-      <EbookOfWeek />
-      <SearchSection />
-      <WhyBuy />
-      <Testimonials />
-      <PopularBanner />
-      <BooksOnSale />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/503" element={<ServiceUnavailable />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

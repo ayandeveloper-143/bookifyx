@@ -3,7 +3,7 @@ import React from 'react';
 const books = Array.from({ length: 8 }, (_, i) => ({
   id: i + 1,
   title: `Book ${i + 1}`,
-  src: `/src/assets/week-book-${i + 1}.png`
+  src: `https://placehold.co/240x360?text=Book+${i + 1}`
 }));
 
 const BookWeekCard = ({ src }) => {

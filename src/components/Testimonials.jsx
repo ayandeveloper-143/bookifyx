@@ -6,21 +6,21 @@ const testimonials = [
     name: 'Sarah Mitchell',
     role: 'Book Lover & Student',
     text: 'BookifyX has an amazing collection of e-books! I found exactly what I was looking for and the checkout process was super smooth. Already enjoying my purchases on my phone and tablet!',
-    avatar: '/src/assets/avatar-1.png'
+    avatar: 'https://i.pravatar.cc/80?img=12'
   },
   {
     id: 2,
     name: 'James Rodriguez',
     role: 'Digital Reader',
     text: 'The prices on BookifyX are unbeatable compared to other platforms. I love that I can download books and read them offline. Great service and tons of genres to choose from!',
-    avatar: '/src/assets/avatar-2.png'
+    avatar: 'https://i.pravatar.cc/80?img=32'
   },
   {
     id: 3,
     name: 'Emily Chen',
     role: 'Avid Reader & Author',
     text: 'Finally found a platform where I can buy e-books instantly and start reading right away! The sync feature across all my devices is amazing. Highly recommended!',
-    avatar: '/src/assets/avatar-3.png'
+    avatar: 'https://i.pravatar.cc/80?img=44'
   }
 ];
 
@@ -134,9 +134,8 @@ const MobileCarousel = () => {
               setActiveIndex(index);
               scheduleResume();
             }}
-            className={`w-2 h-2 rounded-full transition-colors duration-300 ${
-              index === activeIndex ? 'bg-primary' : 'bg-gray-300'
-            }`}
+            className={`w-2 h-2 rounded-full transition-colors duration-300 ${index === activeIndex ? 'bg-primary' : 'bg-gray-300'
+              }`}
             aria-label={`Go to testimonial ${index + 1}`}
           />
         ))}
