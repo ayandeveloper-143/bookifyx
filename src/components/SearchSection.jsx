@@ -1,16 +1,14 @@
 import React, { useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 const genres = ['JavaScript', 'Python', 'React', 'DSA', 'System Design'];
 
 const SearchSection = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const inputRef = useRef(null);
-  const navigate = useNavigate();
 
   const handleSearch = () => {
     if (searchTerm.trim()) {
-      navigate(`/browse?query=${encodeURIComponent(searchTerm.trim())}`);
+      window.location.href = `/browse?query=${encodeURIComponent(searchTerm.trim())}`;
     }
   };
 
