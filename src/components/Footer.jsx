@@ -36,7 +36,7 @@ const footerColumns = [
       { label: 'Terms', href: '/terms-conditions' },
       { label: 'Privacy', href: '/privacy-policy' },
       { label: 'Cookies', href: '/cookies' },
-      { label: 'DMCA', href: '/dmca' }
+      { label: 'Refund', href: '/refund-policy' }
     ]
   }
 ];

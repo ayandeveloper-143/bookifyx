@@ -69,7 +69,7 @@ const SaleBookCard = ({ book }) => {
       <div className="relative">
         <img
           src={book.image}
-          className="w-full h-64 sm:h-64 md:h-64 object-cover rounded-lg md:rounded-xl shadow-sm hover:shadow-md transition-shadow"
+          className="w-full h-64 sm:h-64 md:h-64 object-cover rounded-lg md:rounded-xl shadow-sm hover:shadow-sm transition-shadow"
           alt={book.title}
         />
         <span className="absolute top-2 left-2 md:top-3 md:left-3 bg-orange-500 text-white text-xs md:text-sm font-bold px-3 md:px-4 py-1 rounded-lg">

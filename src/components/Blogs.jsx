@@ -122,7 +122,7 @@ const Blogs = () => {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6">
                         <div className="fade-in">
                             <span className="text-primary font-semibold text-sm uppercase tracking-wide">Featured Post</span>
-                            <a href={`/blogs/${generateSlug(featuredBlog.author)}/${generateSlug(featuredBlog.title)}`} className="block mt-4 bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 dark:border-gray-700">
+                            <a href={`/blogs/${generateSlug(featuredBlog.author)}/${generateSlug(featuredBlog.title)}`} className="block mt-4 bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-sm transition-shadow duration-300 border border-gray-200 dark:border-gray-700">
                                 <div className="flex flex-col lg:flex-row">
                                     <div className="lg:w-1/2">
                                         <img
@@ -188,7 +188,7 @@ const Blogs = () => {
                                 <a
                                     key={blog.id}
                                     href={`/blogs/${generateSlug(blog.author)}/${generateSlug(blog.title)}`}
-                                    className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-all duration-300 group"
+                                    className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-sm transition-all duration-300 group"
                                 >
                                     <div className="relative overflow-hidden">
                                         <img

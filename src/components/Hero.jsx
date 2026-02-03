@@ -73,7 +73,7 @@ const Hero = () => {
 
           <div
             data-parallax="0.1"
-            className="absolute top-40 right-0 bg-white dark:bg-gray-700 p-4 rounded-xl shadow-md border dark:border-gray-600 z-20 flex items-start gap-3 w-60"
+            className="absolute top-40 right-0 bg-white dark:bg-gray-700 p-4 rounded-xl shadow-sm border dark:border-gray-600 z-20 flex items-start gap-3 w-60"
           >
             <img src="/src/assets/laptop.png" className="h-7 w-7 select-none" draggable={false} alt="" />
             <div>
@@ -84,7 +84,7 @@ const Hero = () => {
 
           <div
             data-parallax="0.15"
-            className="absolute top-60 left-0 bg-white dark:bg-gray-700 p-4 rounded-xl shadow-md border dark:border-gray-600 z-20 flex items-start gap-3 w-60"
+            className="absolute top-60 left-0 bg-white dark:bg-gray-700 p-4 rounded-xl shadow-sm border dark:border-gray-600 z-20 flex items-start gap-3 w-60"
           >
             <img src="/src/assets/book.png" className="h-7 w-7 select-none" draggable={false} alt="" />
             <div>

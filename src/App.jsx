@@ -13,6 +13,8 @@ import AboutUs from './components/AboutUs.jsx';
 import Careers from './components/Careers.jsx';
 import Blogs from './components/Blogs.jsx';
 import BlogDetail from './components/BlogDetail.jsx';
+import CookiesPolicy from './components/CookiesPolicy.jsx';
+import RefundPolicy from './components/RefundPolicy.jsx';
 import useParallax from './components/useParallax.js';
 import useRevealOnScroll from './components/useRevealOnScroll.js';
 
@@ -34,6 +36,8 @@ const AppContent = () => {
       <Route path="/careers" element={<Careers />} />
       <Route path="/blogs" element={<Blogs />} />
       <Route path="/blogs/:author/:slug" element={<BlogDetail />} />
+      <Route path="/cookies" element={<CookiesPolicy />} />
+      <Route path="/refund-policy" element={<RefundPolicy />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

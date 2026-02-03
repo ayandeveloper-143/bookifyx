@@ -146,7 +146,7 @@ const Careers = () => {
                             {openPositions.map((job, index) => (
                                 <div
                                     key={index}
-                                    className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-all duration-300 fade-in"
+                                    className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-sm transition-all duration-300 fade-in"
                                     style={{ animationDelay: `${index * 50}ms` }}
                                 >
                                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
