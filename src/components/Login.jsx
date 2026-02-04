@@ -134,7 +134,7 @@ const Login = () => {
                     {/* RIGHT SIDE IMAGE (PLACEHOLDER) */}
                     <div className="hidden md:block bg-primary">
                         <img
-                            src="/src/assets/loginvisualization.jpg"
+                            src="https://placehold.co/700x900.png?text=Your+Artwork+Here"
                             alt="design placeholder"
                             className="w-full h-full object-cover object-center"
                             style={{ minHeight: 320 }}

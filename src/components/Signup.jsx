@@ -65,7 +65,7 @@ const Signup = () => {
     return (
         <div className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
             <Header />
-            <main className="min-h-[calc(100vh-4rem)] flex items-center justify-center px-2 sm:px-4 md:px-6 mt-4 mb-4">
+            <main className="min-h-[calc(100vh-14rem)] flex items-center justify-center px-2 sm:px-4 md:px-6 mt-4 mb-4">
                 <div className="w-full max-w-5xl bg-white border border-gray-200 rounded-xl overflow-hidden grid grid-cols-1 md:grid-cols-2 animate-fadein">
                     {/* LEFT SIDE */}
                     <div className="p-5 sm:p-8 md:p-10 flex flex-col justify-center">
@@ -198,7 +198,7 @@ const Signup = () => {
                     {/* RIGHT SIDE IMAGE (PLACEHOLDER) */}
                     <div className="hidden md:block bg-primary">
                         <img
-                            src="/src/assets/loginvisualization.jpg"
+                            src="https://placehold.co/700x900.png?text=Your+Artwork+Here"
                             alt="design placeholder"
                             className="w-full h-full object-cover object-center"
                             style={{ minHeight: 320 }}
