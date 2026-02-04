@@ -6,4 +6,7 @@ export default defineConfig({
   server: {
     allowedHosts: ['bookifyx.com'],
   },
+  build: {
+    emptyOutDir: false,
+  },
 });
