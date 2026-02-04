@@ -24,7 +24,7 @@ const FAQ = () => {
         },
         {
             question: 'What is your refund policy?',
-            answer: 'We offer a 7-day refund policy for e-books. If you\'re not satisfied with your purchase, contact our support team within 7 days of purchase for a full refund.',
+            answer: 'Refunds are only provided if you do not receive your e-book in your email or BookifyX account within 7 days of purchase. For any other issues, please contact our support team for assistance.',
         },
         {
             question: 'Do you offer any discounts for students?',

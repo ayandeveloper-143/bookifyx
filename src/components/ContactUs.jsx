@@ -32,8 +32,8 @@ const ContactUs = () => {
         {
             icon: 'fas fa-phone',
             title: 'Phone',
-            value: '+91 1234 567 890',
-            link: 'tel:+911234567890',
+            value: '+91 85095 17215',
+            link: 'tel:+918509517215',
         },
         {
             icon: 'fas fa-map-marker-alt',
