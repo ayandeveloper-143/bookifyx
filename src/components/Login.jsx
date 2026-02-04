@@ -115,7 +115,7 @@ const Login = () => {
                             <div className="flex-1 h-px bg-gray-300"></div>
                         </div>
 
-                        <button className="w-full border py-2.5 sm:py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-gray-50 text-sm sm:text-base">
+                        <button className="w-full border py-2.5 sm:py-3 rounded-lg flex items-center justify-center gap-2  text-sm sm:text-base">
                             <img
                                 src="https://www.svgrepo.com/show/355037/google.svg"
                                 className="w-5"
@@ -134,7 +134,7 @@ const Login = () => {
                     {/* RIGHT SIDE IMAGE (PLACEHOLDER) */}
                     <div className="hidden md:block bg-primary">
                         <img
-                            src="https://placehold.co/700x900.png?text=Your+Artwork+Here"
+                            src="/src/assets/loginvisualization.jpg"
                             alt="design placeholder"
                             className="w-full h-full object-cover object-center"
                             style={{ minHeight: 320 }}

@@ -78,11 +78,11 @@ const Header = () => {
         <div className="flex items-center space-x-2 sm:space-x-4">
           <ThemeToggle />
 
-          <button className="hidden sm:block px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-800 dark:text-gray-200 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+          <button onClick={() => window.location.href = "/login"} className="hidden sm:block px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-800 dark:text-gray-200 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
             Sign in
           </button>
 
-          <button className="hidden sm:block px-5 py-2 rounded-lg font-medium text-white bg-primary">
+          <button onClick={() => window.location.href = "/signup"} className="hidden sm:block px-5 py-2 rounded-lg font-medium text-white bg-primary">
             Create free account
           </button>
 

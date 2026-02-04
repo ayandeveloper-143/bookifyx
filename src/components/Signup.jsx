@@ -65,7 +65,7 @@ const Signup = () => {
     return (
         <div className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
             <Header />
-            <main className="min-h-[calc(100vh-14rem)] flex items-center justify-center px-2 sm:px-4 md:px-6 mt-4 mb-4">
+            <main className="min-h-[calc(100vh-4rem)] flex items-center justify-center px-2 sm:px-4 md:px-6 mt-4 mb-4">
                 <div className="w-full max-w-5xl bg-white border border-gray-200 rounded-xl overflow-hidden grid grid-cols-1 md:grid-cols-2 animate-fadein">
                     {/* LEFT SIDE */}
                     <div className="p-5 sm:p-8 md:p-10 flex flex-col justify-center">
@@ -181,7 +181,7 @@ const Signup = () => {
                                     <span className="text-sm text-gray-500">Or, Sign up with</span>
                                     <div className="flex-1 h-px bg-gray-300"></div>
                                 </div>
-                                <button className="w-full border py-2.5 sm:py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-gray-50 text-sm sm:text-base">
+                                <button className="w-full border py-2.5 sm:py-3 rounded-lg flex items-center justify-center gap-2 text-sm sm:text-base">
                                     <img
                                         src="https://www.svgrepo.com/show/355037/google.svg"
                                         className="w-5"
@@ -198,7 +198,7 @@ const Signup = () => {
                     {/* RIGHT SIDE IMAGE (PLACEHOLDER) */}
                     <div className="hidden md:block bg-primary">
                         <img
-                            src="https://placehold.co/700x900.png?text=Your+Artwork+Here"
+                            src="/src/assets/loginvisualization.jpg"
                             alt="design placeholder"
                             className="w-full h-full object-cover object-center"
                             style={{ minHeight: 320 }}
