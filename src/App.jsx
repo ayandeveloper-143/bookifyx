@@ -18,6 +18,11 @@ import RefundPolicy from './components/RefundPolicy.jsx';
 import useParallax from './components/useParallax.js';
 import useRevealOnScroll from './components/useRevealOnScroll.js';
 
+// Auth Components
+import Login from './components/Login.jsx';
+import Signup from './components/Signup.jsx';
+import ForgotPassword from './components/ForgotPassword.jsx';
+
 const AppContent = () => {
   useParallax();
   useRevealOnScroll();
@@ -39,6 +44,9 @@ const AppContent = () => {
       <Route path="/cookies" element={<CookiesPolicy />} />
       <Route path="/refund-policy" element={<RefundPolicy />} />
       <Route path="*" element={<NotFound />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
     </Routes>
   );
 };

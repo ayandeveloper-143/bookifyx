@@ -110,10 +110,10 @@ const Header = () => {
           </a>
         ))}
         <div className="flex flex-col gap-2 px-6 py-2">
-          <button className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-800 dark:text-gray-200 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors w-full">
+          <button onClick={() => window.location.href = "/login"} className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-800 dark:text-gray-200 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors w-full">
             Sign in
           </button>
-          <button className="px-4 py-2 rounded-lg font-medium text-white w-full bg-primary">
+          <button onClick={() => window.location.href = "/signup"} className="px-4 py-2 rounded-lg font-medium text-white w-full bg-primary">
             Create free account
           </button>
         </div>
