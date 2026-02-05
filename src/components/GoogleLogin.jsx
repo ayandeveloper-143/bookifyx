@@ -1,32 +1,8 @@
-import { useEffect } from "react";
+import { GoogleLogin as GoogleLoginButton } from '@react-oauth/google';
 
 export default function GoogleLogin({ onSuccess }) {
-    useEffect(() => {
-        /* global google */
-        google.accounts.id.initialize({
-            client_id: import.meta.env.VITE_GOOGLE_CLIENT_ID,
-            callback: handleCredentialResponse,
-        });
-
-        google.accounts.id.renderButton(
-            document.getElementById("googleBtn"),
-            {
-                theme: "outline",
-                size: "large",
-                width: "100%",
-                text: "signin_with",
-                shape: "rect",
-                logo_alignment: "left",
-            }
-        );
-
-    }, []);
-
-    function handleCredentialResponse(response) {
-        // Google JWT Token (ID Token)
-        const token = response.credential;
-
-        // Send to backend
+    const handleSuccess = (credentialResponse) => {
+        const token = credentialResponse.credential;
         fetch("/api/auth/google-login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -40,7 +16,20 @@ export default function GoogleLogin({ onSuccess }) {
                     console.error("Login failed:", data.message);
                 }
             });
-    }
+    };
 
-    return <div id="googleBtn"></div>;
+    return (
+        <div style={{ width: '100%' }}>
+            <GoogleLoginButton
+                onSuccess={handleSuccess}
+                onError={() => console.error('Google Login Failed')}
+                width="100%"
+                theme="outline"
+                size="large"
+                text="signin_with"
+                shape="rect"
+                logo_alignment="left"
+            />
+        </div>
+    );
 }
