@@ -3,6 +3,51 @@ import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 import ThemeImage from './ThemeImage.jsx';
 
+function GoogleLogin({ onSuccess }) {
+    useEffect(() => {
+        /* global google */
+        google.accounts.id.initialize({
+            client_id: import.meta.env.VITE_GOOGLE_CLIENT_ID,
+            callback: handleCredentialResponse,
+        });
+
+        google.accounts.id.renderButton(
+            document.getElementById("googleBtn"),
+            {
+                theme: "outline",
+                size: "large",
+                width: "100%",
+                text: "signin_with",
+                shape: "rect",
+                logo_alignment: "left",
+            }
+        );
+
+    }, []);
+
+    function handleCredentialResponse(response) {
+        // Google JWT Token (ID Token)
+        const token = response.credential;
+
+        // Send to backend
+        fetch("/api/auth/google-login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ token }),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.status) {
+                    onSuccess(data);
+                } else {
+                    console.error("Login failed:", data.message);
+                }
+            });
+    }
+
+    return <div id="googleBtn"></div>;
+}
+
 // EyeWithAnimatedSlash: SVG with static eye and animated slash using imperative JS
 function EyeWithAnimatedSlash({ showSlash }) {
     const slashRef = useRef(null);
@@ -100,7 +145,7 @@ const Login = () => {
                                 Remember me
                             </label>
 
-                            <a href="/forgot-password" className="text-sm text-primary hover:underline ml-auto">
+                            <a href="/auth/forgot-password" className="text-sm text-primary hover:underline ml-auto">
                                 Forgot your password?
                             </a>
                         </div>
@@ -115,17 +160,15 @@ const Login = () => {
                             <div className="flex-1 h-px bg-gray-300"></div>
                         </div>
 
-                        <button className="w-full border py-2.5 sm:py-3 rounded-lg flex items-center justify-center gap-2  text-sm sm:text-base">
-                            <img
-                                src="https://www.svgrepo.com/show/355037/google.svg"
-                                className="w-5"
-                            />
-                            Sign up with Google
-                        </button>
+                        <GoogleLogin onSuccess={(data) => {
+                            console.log("Google login successful:", data);
+                            // Handle successful login here
+                        }} />
+
 
                         <p className="text-xs sm:text-sm text-center mt-5 sm:mt-6">
                             Don’t have an account?{" "}
-                            <a href="/signup" className="text-primary hover:underline">
+                            <a href="/auth/signup" className="text-primary hover:underline">
                                 Register here
                             </a>
                         </p>

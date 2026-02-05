@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import Api from "./lib/api";
+import { GoogleOAuthProvider } from '@react-oauth/google';
 import './index.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { ThemeProvider } from './components/ThemeProvider.jsx';

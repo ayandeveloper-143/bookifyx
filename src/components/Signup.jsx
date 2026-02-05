@@ -84,7 +84,7 @@ const Signup = () => {
                             Sign up to start reading e-books.
                         </p>
                         {submitted ? (
-                            <div className="text-center text-green-600 font-medium py-8">Account created! You can now <a href="/login" className="text-primary underline">login</a>.</div>
+                            <div className="text-center text-green-600 font-medium py-8">Account created! You can now <a href="/auth/login" className="text-primary underline">login</a>.</div>
                         ) : (
                             <>
                                 <form onSubmit={handleSubmit} className="space-y-0">
@@ -192,7 +192,7 @@ const Signup = () => {
                         )}
                         <p className="text-xs sm:text-sm text-center mt-5 sm:mt-6">
                             Already have an account?{' '}
-                            <a href="/login" className="text-primary hover:underline">Login</a>
+                            <a href="/auth/login" className="text-primary hover:underline">Login</a>
                         </p>
                     </div>
                     {/* RIGHT SIDE IMAGE (PLACEHOLDER) */}

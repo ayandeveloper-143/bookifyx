@@ -44,9 +44,10 @@ const AppContent = () => {
       <Route path="/cookies" element={<CookiesPolicy />} />
       <Route path="/refund-policy" element={<RefundPolicy />} />
       <Route path="*" element={<NotFound />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/signup" element={<Signup />} />
-      <Route path="/forgot-password" element={<ForgotPassword />} />
+      {/* Auth routes */}
+      <Route path="/auth/login" element={<Login />} />
+      <Route path="/auth/signup" element={<Signup />} />
+      <Route path="/auth/forgot-password" element={<ForgotPassword />} />
     </Routes>
   );
 };

@@ -72,15 +72,16 @@ app.use((err, req, res, next) => {
     next(err);
 });
 
-// ==========================
-// Api routes
-// ==========================
-
 app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 
 app.get('/api/csrf-token', originLock, csrfProtection, (req, res) => {
     res.json({ csrfToken: req.csrfToken() });
 });
+
+
+// ==========================
+// Api routes
+// ==========================
 
 
 // ==========================

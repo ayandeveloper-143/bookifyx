@@ -78,11 +78,11 @@ const Header = () => {
         <div className="flex items-center space-x-2 sm:space-x-4">
           <ThemeToggle />
 
-          <button onClick={() => window.location.href = "/login"} className="hidden sm:block px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-800 dark:text-gray-200 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+          <button onClick={() => window.location.href = "/auth/login"} className="hidden sm:block px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-800 dark:text-gray-200 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
             Sign in
           </button>
 
-          <button onClick={() => window.location.href = "/signup"} className="hidden sm:block px-5 py-2 rounded-lg font-medium text-white bg-primary">
+          <button onClick={() => window.location.href = "/auth/signup"} className="hidden sm:block px-5 py-2 rounded-lg font-medium text-white bg-primary">
             Create free account
           </button>
 
@@ -110,10 +110,10 @@ const Header = () => {
           </a>
         ))}
         <div className="flex flex-col gap-2 px-6 py-2">
-          <button onClick={() => window.location.href = "/login"} className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-800 dark:text-gray-200 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors w-full">
+          <button onClick={() => window.location.href = "/auth/login"} className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-800 dark:text-gray-200 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors w-full">
             Sign in
           </button>
-          <button onClick={() => window.location.href = "/signup"} className="px-4 py-2 rounded-lg font-medium text-white w-full bg-primary">
+          <button onClick={() => window.location.href = "/auth/signup"} className="px-4 py-2 rounded-lg font-medium text-white w-full bg-primary">
             Create free account
           </button>
         </div>
