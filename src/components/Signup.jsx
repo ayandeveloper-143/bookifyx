@@ -150,13 +150,10 @@ const Signup = () => {
                                     <span className="text-sm text-gray-500">Or, Sign up with</span>
                                     <div className="flex-1 h-px bg-gray-300"></div>
                                 </div>
-                                <button className="w-full border py-2.5 sm:py-3 rounded-lg flex items-center justify-center gap-2 text-sm sm:text-base">
-                                    <img
-                                        src="https://www.svgrepo.com/show/355037/google.svg"
-                                        className="w-5"
-                                    />
-                                    Sign up with Google
-                                </button>
+                                <GoogleLogin onSuccess={(data) => {
+                                    console.log("Google login successful:", data);
+                                    // Handle successful login here
+                                }} />
                             </>
                         )}
                         <p className="text-xs sm:text-sm text-center mt-5 sm:mt-6">
