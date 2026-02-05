@@ -4,7 +4,7 @@ const cors = require('cors');
 const csurf = require('csurf');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-require('dotenv').config();
+require('dotenv').config({ path: '../.env' });
 const app = express();
 app.use(helmet());
 app.use(cors({ origin: process.env.FRONTEND_URL, credentials: true })); // adjust to your frontend URL
