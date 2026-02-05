@@ -28,6 +28,33 @@ const csrfProtection = csurf({
         secure: false
     }
 });
+
+const allowedHost = process.env.FRONTEND_URL;
+
+function originLock(req, res, next) {
+    const origin = req.headers.origin || "";
+    const referer = req.headers.referer || "";
+
+    // Allow direct access (no origin) → optional
+    const isDirect = (!origin && !referer);
+
+    const isValidOrigin =
+        origin.includes(allowedHost) ||
+        referer.includes(allowedHost);
+
+    if (isDirect || isValidOrigin) {
+        return next();
+    }
+
+    return res.status(403).json({
+        status: false,
+        message: "Forbidden: Invalid origin"
+    });
+}
+
+app.use(originLock);
+
+
 app.use(csrfProtection);
 
 app.use((req, res, next) => {
@@ -51,7 +78,7 @@ app.use((err, req, res, next) => {
 
 app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 
-app.get('/api/csrf-token', (req, res) => {
+app.get('/api/csrf-token', originLock, csrfProtection, (req, res) => {
     res.json({ csrfToken: req.csrfToken() });
 });
 
