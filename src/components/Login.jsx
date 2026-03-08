@@ -99,10 +99,10 @@ const Login = () => {
                     {/* RIGHT SIDE IMAGE (PLACEHOLDER) */}
                     <div className="hidden md:block bg-primary">
                         <img
-                            src="https://placehold.co/700x900.png?text=Your+Artwork+Here"
+                            src="/src/assets/ChatGPT Image Feb 9, 2026, 03_50_42 PM.png"
                             alt="design placeholder"
-                            className="w-full h-full object-cover object-center"
-                            style={{ minHeight: 320 }}
+                            className="w-full h-full object-cover object-center opacity-90"
+                            style={{ minHeight: 30 }}
                         />
                     </div>
 

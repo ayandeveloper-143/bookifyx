@@ -22,6 +22,8 @@ import useRevealOnScroll from './components/useRevealOnScroll.js';
 import Login from './components/Login.jsx';
 import Signup from './components/Signup.jsx';
 import ForgotPassword from './components/ForgotPassword.jsx';
+import EmailVerificationNotice from './components/EmailVerificationNotice.jsx';
+import Auth from './components/auth.jsx';
 
 const AppContent = () => {
   useParallax();
@@ -45,9 +47,11 @@ const AppContent = () => {
       <Route path="/refund-policy" element={<RefundPolicy />} />
       <Route path="*" element={<NotFound />} />
       {/* Auth routes */}
+      <Route path="/auth" element={<Auth />} />
       <Route path="/auth/login" element={<Login />} />
       <Route path="/auth/signup" element={<Signup />} />
       <Route path="/auth/forgot-password" element={<ForgotPassword />} />
+      <Route path="/verify-email" element={<EmailVerificationNotice />} />
     </Routes>
   );
 };

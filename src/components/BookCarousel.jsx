@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
 const books = [
-  { id: 1, title: 'Book 1', src: 'https://placehold.co/240x360?text=Book+1' },
-  { id: 2, title: 'Book 2', src: 'https://placehold.co/240x360?text=Book+2' },
-  { id: 3, title: 'Book 3', src: 'https://placehold.co/240x360?text=Book+3' }
+  { id: 1, title: 'Book 1', src: '/src/assets/books/dra_6610000083749_270.webp' },
+  { id: 2, title: 'Book 2', src: '/src/assets/books/dra_6610000083763_270.webp' },
+  { id: 3, title: 'Book 3', src: '/src/assets/books/dra_6610000083756_270.webp' }
 ];
 
 const positions = ['pos-right', 'pos-center', 'pos-left'];

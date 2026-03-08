@@ -1,5 +1,6 @@
 import React from 'react';
 import ThemeImage from './ThemeImage.jsx';
+import GridSVG from './Grid.jsx';
 
 const Hero = () => {
   return (
@@ -64,6 +65,7 @@ const Hero = () => {
             alt="Decorative dot"
           />
 
+          <GridSVG />
           <img
             src="/src/assets/student.png"
             className="relative z-10 mx-auto select-none max-w-full h-auto"

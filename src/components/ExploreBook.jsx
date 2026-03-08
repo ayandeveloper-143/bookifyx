@@ -19,7 +19,7 @@ const ExploreBook = () => {
           </p>
 
           <div className="flex items-center gap-4 pt-4">
-            <button className="border border-gray-300 px-6 py-2 md:py-3 rounded-lg font-medium hover:bg-gray-100 flex items-center justify-center gap-2 text-white w-full sm:w-auto bg-primary border-primary">
+            <button className="border border-gray-300 px-6 py-2 md:py-3 rounded-lg font-medium flex items-center justify-center gap-2 text-white w-full sm:w-auto bg-primary border-primary">
               View My Library
               <span className="text-xl hidden sm:inline">→</span>
             </button>

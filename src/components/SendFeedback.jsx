@@ -81,8 +81,8 @@ const SendFeedback = () => {
                                             type="button"
                                             onClick={() => setFormData({ ...formData, feedbackType: type.value })}
                                             className={`p-4 rounded-xl transition-all flex flex-col items-center gap-2 ${formData.feedbackType === type.value
-                                                    ? 'bg-primary text-white'
-                                                    : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                                                ? 'bg-primary text-white'
+                                                : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
                                                 }`}
                                         >
                                             <i className={`${type.icon} text-xl`}></i>

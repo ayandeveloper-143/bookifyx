@@ -3,63 +3,63 @@ import React from 'react';
 const books = [
   {
     id: 1,
-    title: 'The Missadventure of..',
-    categories: 'ADVENTURE, SURVIVAL',
+    title: 'java advanced guide to programming code with javascript',
+    categories: 'PROGRAMMING, COMPUTER SCIENCE',
     rating: '4.7',
-    price: '$45.4',
-    original: '$98.4',
+    price: '₹599',
+    original: '₹1,204',
     discount: '50%',
-    image: 'https://placehold.co/300x420'
+    image: '/src/assets/books/dra_6610000083763_270.webp'
   },
   {
     id: 2,
-    title: 'The Missadventure of..',
-    categories: 'ADVENTURE, SURVIVAL',
+    title: 'java tips and tricks to programming code with javascript',
+    categories: 'PROGRAMMING, COMPUTER SCIENCE',
     rating: '4.7',
-    price: '$45.4',
-    original: '$98.4',
+    price: '₹699',
+    original: '₹1,404',
     discount: '50%',
-    image: 'https://placehold.co/300x420'
+    image: '/src/assets/books/dra_6610000083756_270.webp'
   },
   {
     id: 3,
-    title: 'Battle Drive',
-    categories: 'THRILL, DRAMA, HORROR',
+    title: 'javascript best practices to programming code with javascript',
+    categories: 'PROGRAMMING, COMPUTER SCIENCE',
     rating: '4.7',
-    price: '$45.4',
-    original: '$98.4',
+    price: '₹1,599',
+    original: '₹2,804',
     discount: '50%',
-    image: 'https://placehold.co/300x420'
+    image: '/src/assets/books/dra_6610000083749_270.webp'
   },
   {
     id: 4,
-    title: 'Seconds [PART 1]',
-    categories: 'THRILL, DRAMA, HORROR',
+    title: 'javascript beginner guide to programming code with javascript',
+    categories: 'PROGRAMMING, COMPUTER SCIENCE',
     rating: '6.5',
-    price: '$45.4',
-    original: '$98.4',
+    price: '₹1,599',
+    original: '₹2,804',
     discount: '50%',
-    image: 'https://placehold.co/300x420'
+    image: '/src/assets/books/dra_9781386829607_270.webp'
   },
   {
     id: 5,
-    title: 'Terrible Madness',
-    categories: 'THRILL, DRAMA, HORROR',
+    title: 'nextjs advanced guide to programming code with javascript',
+    categories: 'PROGRAMMING, COMPUTER SCIENCE',
     rating: '4.7',
-    price: '$45.4',
-    original: '$98.4',
+    price: '₹1,599',
+    original: '₹2,804',
     discount: '30%',
-    image: 'https://placehold.co/300x420'
+    image: '/src/assets/books/dra_9798223015437_270.webp'
   },
   {
     id: 6,
-    title: 'Take Out Tango',
-    categories: 'SPORTS, DRAMA',
+    title: 'typescript advanced guide to programming code with javascript',
+    categories: 'PROGRAMMING, COMPUTER SCIENCE',
     rating: '6.8',
-    price: '$56.4',
-    original: '$98.4',
+    price: '₹1,599',
+    original: '₹2,804',
     discount: '40%',
-    image: 'https://placehold.co/300x420'
+    image: '/src/assets/books/dra_9798232444464_270.webp'
   }
 ];
 

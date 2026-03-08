@@ -270,7 +270,7 @@ section {
 .theme-toggle {
   all: unset;
   cursor: pointer;
-  inline-size: 36px;
+  inline-size: 26px;
   block-size: 36px;
   padding: 0.1rem;
   border-radius: 6px;
@@ -516,7 +516,7 @@ html.dark .mobile-menu a {
 .book-carousel .book-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 /* Left position */
