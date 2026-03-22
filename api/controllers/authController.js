@@ -257,6 +257,93 @@ const checkEmailVerification = async (req, res) => {
 
 
 // =====================================
+
+const logout = async (req, res) => {
+    try {
+        const { refreshToken } = req.cookies;
+
+        if (refreshToken) {
+            await db.query(
+                `UPDATE users SET refresh_token = NULL, access_token = NULL WHERE refresh_token = ?`,
+                [refreshToken]
+            );
+        }
+
+        res.clearCookie("refreshToken");
+        res.clearCookie("accessToken");
+        return res.json({ status: true, message: "Logged out successfully" });
+    }
+    catch (err) {
+        console.error("Logout Error:", err);
+        return res.status(500).json({ status: false, message: "Internal server error" });
+    }
+}
+
+const authenticate = async (req, res) => {
+    try {
+        const { accessToken } = req.cookies;
+
+        if (!accessToken) {
+            return res.status(401).json({ status: false, message: "No access token provided" });
+        }
+
+        const decoded = jwt.verify(accessToken, process.env.JWT_SECRET);
+        const userid = decoded.userid;
+
+        const [rows] = await db.query(
+            `SELECT userid, email FROM users WHERE userid = ? AND access_token = ? LIMIT 1`,
+            [userid, accessToken]
+        );
+
+        if (rows.length === 0) {
+            return res.status(401).json({ status: false, message: "Invalid access token" });
+        }
+
+        return res.json({ status: true, message: "Authenticated", userid: rows[0].userid, email: rows[0].email });
+
+    }
+    catch (err) {
+        console.error("Authenticate Error:", err);
+        return res.status(500).json({ status: false, message: "Internal server error" });
+    }
+};
+// forget password 
+
+const forgetPassword = async (req, res) => {
+    try {
+        const { email } = req.body;
+
+        if (!email) {
+            return res.status(400).json({ status: false, message: "Email is required" });
+        }
+
+        const [rows] = await db.query(`SELECT userid FROM users WHERE email = ? LIMIT 1`, [email]);
+
+        if (rows.length === 0) {
+            return res.status(404).json({ status: false, message: "Email not found" });
+        }
+
+        const userid = rows[0].userid;
+        const resetToken = randomUUID();
+        const expiresAt = new Date(Date.now() + 60 * 60 * 1000);
+
+        await db.query(
+            `INSERT into password_resets (userid, reset_token, expires_at) VALUES (?, ?, ?)`,
+            [userid, resetToken, expiresAt]
+        );
+
+        const resetLink = `${process.env.FRONTEND_URL}/reset-password?token=${resetToken}`;
+        console.log("Password reset link:", resetLink);
+
+        return res.json({ status: true, message: "Password reset link has been sent to your email" });
+    } catch (err) {
+        console.error("Forget Password Error:", err);
+        return res.status(500).json({ status: false, message: "Internal server error" });
+    }
+};
+
+
+// =====================================
 // Exports
 // =====================================
 export default {
